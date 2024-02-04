@@ -72,7 +72,6 @@ For example, under "Accident_Severity" column, replaced “Fetal” with “Fata
 #### Created a Calendar table:
 <!--- Used the accident date to create a function in calendar such that the table picks the earliest date to the latest accident dates. ---> <br/>
 Calendar = CALENDAR(MIN(Data[Accident Date]),MAX(Data[Accident Date]))
-
 #### Extracted year from the calendar table:
 Year = YEAR('Calendar'[Date])
 #### Extracted month from the calendar table:
@@ -81,6 +80,7 @@ Month = FORMAT('Calendar'[Date],"mmm")
 
 ### Data modelling
 Created a Many to One (*:1) relationship between the Data table and the Calendar table by connecting the “Accident Date” in the Data table to “Date” in the Calendar table. <br/>
+
 That is, the Accident date can have many values whereas, the Calendar’s Date will have a single value. <br/>
 ![image](https://github.com/DavidRemo/Road-Accident-Analysis-in-PowerBI/assets/68180517/dda2a5d8-85c1-4b2d-b98c-1bde2640c090) <br/>
 
@@ -89,7 +89,6 @@ That is, the Accident date can have many values whereas, the Calendar’s Date w
 #### Determine the Total Casualties
 Current Year (CY) casualties: <br/>
 CY Casualties = TOTALYTD(SUM(Data[Number_of_Casualties]),'Calendar'[Date]) <br/>
-<br/>
 
 Previous Year (PY) Casualties<br/>
 PY Casualties = CALCULATE(SUM(Data[Number_of_Casualties]),SAMEPERIODLASTYEAR('Calendar'[Date]))<br/>
