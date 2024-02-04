@@ -11,16 +11,16 @@ I performed a diagnostic and prescriptive analysis on a Road Accident Dataset, t
 In this project I created a dashboard in Power BI for Road Accidents Analysis.
 
 ## Project Steps
-•	Requirement gathering
-•	Stakeholders in project
-•	Raw data overview
-•	Connecting data with Power BI
-•	Data cleaning
-•	Data processing
-•	Data modelling
-•	Data visualization/ Charts design
-•	Report/ Dashboard
-•	Insights
+•	Requirement gathering <br/>
+•	Stakeholders in project <br/>
+•	Raw data overview <br/>
+•	Connecting data with Power BI <br/>
+•	Data cleaning <br/>
+•	Data processing <br/>
+•	Data modelling <br/>
+•	Data visualization/ Charts design <br/>
+•	Report/ Dashboard <br/>
+•	Insights <br/>
 
 
 ## Requirements
@@ -35,42 +35,42 @@ Client wants to create a Road Accident Dashboard for the year 2021 and 2022 so t
 
 
 ## Stakeholders
-•	Ministry of Transport
-•	Road Transport Department
-•	Police Force
-•	Emergency Services Department
-•	Road Safety corps
-•	Transport Operators
-•	Traffic Management Agencies
-•	Public
-•	Media
+•	Ministry of Transport <br/>
+•	Road Transport Department <br/>
+•	Police Force <br/>
+•	Emergency Services Department <br/>
+•	Road Safety corps <br/>
+•	Transport Operators <br/>
+•	Traffic Management Agencies <br/>
+•	Public <br/>
+•	Media <br/>
 
 ## Datasource:
 The dataset used in this project is about road accident casualties in UK in year 2021 and 2022.
 * [Road Accidents Dataset](https://docs.google.com/spreadsheets/d/13Oxgq7VZtXqAKtVR4Y9eiQ3_8Jtrb84CfDx7KPhu6S0/edit?usp=sharing) containing 21 columns and 307,973 rows, with a total of 6,467,434 records of observation.
 
 ## Power BI Functionalities
-•	How to connect to raw data/ flat file
-•	Data cleaning in Power Query
-•	Data processing
-•	Time intelligence function/ calendar date table in Power BI
-•	Data modelling (relationship between multiple tables)
-•	YTD (year to data) and YoY (year on year) Growth calculations using DAX
-•	KPI and advanced KPI generations
-•	Creating custom columns and measures in the reports
-•	Importing images
-•	Creating different charts and generating insights
-•	Export the report to users
+•	How to connect to raw data/ flat file <br/>
+•	Data cleaning in Power Query <br/>
+•	Data processing <br/>
+•	Time intelligence function/ calendar date table in Power BI <br/>
+•	Data modelling (relationship between multiple tables) <br/>
+•	YTD (year to data) and YoY (year on year) Growth calculations using DAX <br/>
+•	KPI and advanced KPI generations <br/> 
+•	Creating custom columns and measures in the reports <br/>
+•	Importing images <br/>
+•	Creating different charts and generating insights <br/>
+•	Export the report to users <br/>
 
 
 ### Data cleaning
-Used the Power Query Editor for data cleaning.
+Used the Power Query Editor for data cleaning.  <br/>
 For example, under "Accident_Severity" column, replaced “Fetal” with “Fatal”.
 
 
 ### Time intelligence function/ calendar date table in Power BI
 #### Created a Calendar table:
-<!--- Used the accident date to create a function in calendar such that the table picks the earliest date to the latest accident dates. --->
+<!--- Used the accident date to create a function in calendar such that the table picks the earliest date to the latest accident dates. ---> <br/>
 Calendar = CALENDAR(MIN(Data[Accident Date]),MAX(Data[Accident Date]))
 
 #### Extracted year from the calendar table:
@@ -103,13 +103,13 @@ YoY Casualties = ([CY Casualties]-[PY Casualties])/[PY Casualties]
 As with respect to last year, the current year casualties/ number of accidents have reduced by almost 12%. <br/>
 
 #### Determine the Total Accidents
-Current Year Accidents
+Current Year Accidents <br/>
 CY Accidents = TOTALYTD(COUNT(Data[Accident_Index]),'Calendar'[Date]) <br/>
 
-Previous Year Accidents
+Previous Year Accidents <br/>
 PY Accidents = CALCULATE(COUNT(Data[Accident_Index]),SAMEPERIODLASTYEAR('Calendar'[Date])) <br/>
 
-Year on Year Accidents
+Year on Year Accidents <br/>
 YoY Accidents = ([CY Accidents]-[PY Accidents])/[PY Accidents] <br/>
  
 ![image](https://github.com/DavidRemo/Road-Accident-Analysis-in-PowerBI/assets/68180517/dfcffa1b-f1da-4349-b990-00bdecf7e514) <br/>
@@ -153,7 +153,7 @@ Single carriage-way roads have caused over 70% of accidents. In light of this, t
 
 
 ### Dashboard Visualization
-![image](https://github.com/DavidRemo/Road-Accident-Analysis-in-PowerBI/assets/68180517/a05ab174-5e73-4ad8-b58c-3a5d3e85da76)
+![image](https://github.com/DavidRemo/Road-Accident-Analysis-in-PowerBI/assets/68180517/a05ab174-5e73-4ad8-b58c-3a5d3e85da76) <br/>
 
 
 ## Summary of Findings:
@@ -169,20 +169,20 @@ Greater number of road accident casualties occurred in urban regions during dayl
 
 From my diagnostic analysis the following were observed: <br/>
 
-· Daylight has more casualties as more vehicles tend to go out during the day than in the dark.<br/>
+•	Daylight has more casualties as more vehicles tend to go out during the day than in the dark.<br/>
 
-· Due to urbanization, urban regions tend to have more road accident casualties.<br/>
+•	Due to urbanization, urban regions tend to have more road accident casualties.<br/>
 
-· Cars cause more casualties because it is the most common means of road transportation.
+•	Cars cause more casualties because it is the most common means of road transportation.<br/>
 
-· Agricultural vehicles cause less road accident casualties because they are seldom used on roads and mostly used in agricultural environments like farm.<br/>
+•	Agricultural vehicles cause less road accident casualties because they are seldom used on roads and mostly used in agricultural environments like farm.<br/>
 
-· Hypothetically, people go out less during snowy weather, meaning fewer vehicles are used creating lesser road accident casualties compared to when the road is dried.<br/>
+•	Hypothetically, people go out less during snowy weather, meaning fewer vehicles are used creating lesser road accident casualties compared to when the road is dried.<br/>
 
-From my prescriptive analysis the following will recommended to be taken into consideration:<br/>
+#### From my prescriptive analysis the following will recommended to be taken into consideration:<br/>
 
-· Less or no single carriageway road types are constructed, as they cause very high road accident casualty.<br/>
+•	Less or no single carriageway road types are constructed, as they cause very high road accident casualty.<br/>
 
-· More lights are lit up in the dark to reduce more of the road casualties in the dark.<br/>
+•	More lights are lit up in the dark to reduce more of the road casualties in the dark.<br/>
 
 
