@@ -152,6 +152,8 @@ Single carriage-way roads have caused over 70% of accidents. In light of this, t
 
 
 ### Dashboard Visualization
+* [Click link to Dashboard visualization on Power BI](https://app.powerbi.com/links/Eo7oeUkvJ_?ctid=31bcf846-ba11-4c63-b9c2-62bfcaf35b6d&pbi_source=linkShare) <br/>
+
 ![image](https://github.com/DavidRemo/Road-Accident-Analysis-in-PowerBI/assets/68180517/a05ab174-5e73-4ad8-b58c-3a5d3e85da76) <br/>
 
 
